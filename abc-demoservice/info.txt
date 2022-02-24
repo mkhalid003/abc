@@ -1,0 +1,4 @@
+Redis Example
+https://medium.com/@hulunhao/how-to-use-redis-template-in-java-spring-boot-647a7eb8f8cc
+
+https://www.baeldung.com/spring-data-redis-tutorial
