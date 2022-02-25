@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    triggers {
+        pollSCM '* * * * *'
+    }
+    tools {
+    maven 'M3'
+    }
+    stages {
+        stage("Build") {
+            steps {
+                sh "mvn -f abc-dmeoservice/pom.xml clean install"
+            }
+        }
+        stage("Test") {
+            steps {
+                sh "mvn test"
+            }
+        }
+    }
+}

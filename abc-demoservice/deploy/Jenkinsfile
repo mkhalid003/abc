@@ -1,17 +1,23 @@
+
 pipeline {
     agent any
-    triggers {
-        pollSCM '* * * * *'
+    tools { 
+        maven 'Maven 3.3.9' 
+        jdk 'jdk8' 
     }
     stages {
-        stage("Build") {
+        stage ('Initialize') {
             steps {
-                sh "mvn -f abc-dmeoservice/pom.xml clean install"
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                ''' 
             }
         }
-        stage("Test") {
+
+        stage ('Build') {
             steps {
-                sh "mvn test"
+                echo 'This is a minimal pipeline.'
             }
         }
     }
