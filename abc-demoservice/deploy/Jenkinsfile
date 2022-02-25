@@ -16,7 +16,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-            	sh "mvn -f abc-dmeoservice/pom.xml clean install"
+            	sh "mvn clean install"
                 echo 'This is a minimal pipeline.'
             }
         }
