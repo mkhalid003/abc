@@ -2,8 +2,7 @@
 pipeline {
     agent any
     tools { 
-        maven 'M3'
-        docker 'docker' 
+        maven 'M3' 
     }
     stages {
         stage ('Initialize') {
@@ -34,7 +33,6 @@ pipeline {
                          
                   }
           }
-             
         
     }
 }
