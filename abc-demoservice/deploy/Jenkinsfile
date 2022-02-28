@@ -24,23 +24,20 @@ pipeline {
         stage ('Docker Build')
         {
             steps {
-            
-            
-            		  sh "cd /Users/muhammadkhalid/Development/GitHub_abc/abc-demoservice"
-                   
-                       sh "docker build -t mkhalid003/abc-demoservice ."
+                               
+                       sh "docker build -t mkhalid003/abc-demoservice abc-demoservice/"
                                                 
                   }
           }
           
           
-        stage ('Docker Push to Docker Hub') 
+        stage ('Docker Push') 
         {
             steps {
             
             		sh "docker login -u mkhalid003 -p Welcome@99 http://hub.docker.com" 
                           
-                    sh "docker push mkhalid003/abc-demoservice ."  
+                    sh "docker push mkhalid003/abc-demoservice"  
                                             
             	}
         }
