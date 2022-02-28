@@ -26,7 +26,7 @@ pipeline {
             steps {
             
             
-            		  sh "pwd"
+            		  sh "cd /Users/muhammadkhalid/Development/GitHub_abc/abc-demoservice"
                    
                        sh "docker build -t mkhalid003/abc-demoservice ."
                                                 
