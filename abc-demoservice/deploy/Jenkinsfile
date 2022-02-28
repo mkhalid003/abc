@@ -21,11 +21,10 @@ pipeline {
             }
         }
         
-        stage ('Docker Build and Push to Docker HuB')
+        stage ('Docker Build')
         {
             steps {
             
-            		   sh "docker login -u mkhalid003 -p Welcome@100 http://hub.docker.com"
                    
                        sh "docker build -t mkhalid003/abc-demoservice ."
                        
@@ -33,6 +32,20 @@ pipeline {
                          
                   }
           }
+          
+          
+        stage ('Docker Push to Docker Hub') 
+        {
+            steps {
+            
+            		sh "docker login -u mkhalid003 -p Welcome@99 http://hub.docker.com" 
+                          
+                    sh "docker push mkhalid003/abc-demoservice ."  
+                                            
+            	}
+        }
+        
+      
         
     }
 }
