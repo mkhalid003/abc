@@ -14,11 +14,26 @@ pipeline {
             }
         }
 
-        stage ('Build') {
+        stage ('Build Maven') {
             steps {
             	sh "mvn -f abc-demoservice/pom.xml clean install"
                 echo 'This is a minimal pipeline.'
             }
         }
+        
+        stage ('Docker Build and Push to Docker HuB')
+        {
+            steps {
+            
+            		   sh "docker login -u mkhalid003 -p Welcome@100 http://hub.docker.com"
+                   
+                       sh "docker build -t mkhalid003/abc-demoservice ."
+                       
+                       sh "docker push mkhalid003/abc-demoservice ."
+                         
+                  }
+          }
+             
+        
     }
 }
