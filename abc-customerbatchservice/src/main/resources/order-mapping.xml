@@ -1,0 +1,27 @@
+<beanio xmlns="http://www.beanio.org/2012/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+
+  <stream name="EPE File" format="csv">
+    
+    <group name="customerOrders" order="1" minOccurs="0" maxOccurs="unbounded">
+      
+      <record name="customer" class="com.abc.abccustomerbatchservice.model.Customer" order="1" minOccurs="1" maxOccurs="1">
+        <field name="recordType" rid="true" literal="Customer" ignore="true"></field>
+        <field name="firstName"></field>
+        <field name="lastName"></field>
+      </record>
+
+      <record name="order" class="com.abc.abccustomerbatchservice.model.Order" order="2" minOccurs="1" maxOccurs="unbounded">
+        <field name="recordType" rid="true" literal="Order" ignore="true"></field>
+        <field name="id"></field>
+        <field name="date" format="yyyy-MM-dd"></field>
+        <field name="description"></field>
+        <field name="amount"></field>
+        <field name="completed"></field>
+      </record>
+    </group>
+		
+    <record name="eof" class="com.abc.abccustomerbatchservice.model.EndOfFile" order="2">
+      <field name="recordType" rid="true" literal="eof" ignore="true"></field>
+    </record>
+  </stream>
+</beanio>

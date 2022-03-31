@@ -1,0 +1,19 @@
+http://localhost:8080/vendor/total
+http://localhost:8080/getCustomers
+
+
+https://betterjavacode.com/programming/how-to-use-api-gateway-with-spring-cloud
+
+Usage of API Gateway
+There are a few functionalities that API Gateway provides.
+
+Routing
+The major usage of API Gateway is routing the request from the client to the appropriate server or microservice. 
+Particularly, API Gateway hides the implementation of API from the client.
+
+Common Functionalities
+API Gateway can also implement extra common functionalities and in-process reducing the load from microservices.  
+These common functionalities include: 
+	logging, authentication, authorization, load balancing, response caching, retry policies, circuit breakers, rate limiter.
+
+

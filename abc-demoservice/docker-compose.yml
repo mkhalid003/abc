@@ -1,8 +1,23 @@
 version: '3'
 services:
-    redis-server:
-        image: 'redis'
+    
     abc-demoservice:
         build: .
         ports:
          - "8081:8081"
+        environment:
+          - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-abc:5432/abc
+          - SPRING_DATASOURCE_USERNAME=abc_admin
+          - SPRING_DATASOURCE_PASSWORD=abc_admin
+          - SPRING_JPA_HIBERNATE_DDL_AUTO=update 
+         
+         
+    postgres-abc:
+        image: 'postgres'
+        ports:
+         - "5432:5432"
+        environment:
+         - POSTGRES_PASSWORD=abc_admin
+         - POSTGRES_USER=abc_admin
+         - POSTGRES_DB=abc 
+    

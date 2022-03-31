@@ -1,0 +1,13 @@
+Customer,Jennifer,Jones 
+Order,1,2019-02-07,Apple products,10,true 
+Order,2,2019-03-08,Microsoft products,20,false 
+Order,3,2019-04-12,Apple products,15,true 
+Order,4,2019-06-21,Microsoft products,45,false 
+Customer,Paul,Adams 
+Order,3,2019-02-11,Monitors,100,false 
+Order,4,2019-02-18,Mobile phones,50,false 
+Customer,Eric,Smith 
+Order,3,2019-12-10,Switch,15,true 
+Order,4,2019-11-01,Routers,50,true 
+Order,4,2019-11-01,Monitors,73,true 
+eof

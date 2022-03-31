@@ -1,0 +1,10 @@
+Pageable request:
+http://localhost:8080/listPageable?page=0&size=2&sort=name
+
+
+Config server request:
+http://localhost:8080/abc-customerservice/dev
+
+We now use the H2-console to insert data in H2 database. 
+Go to localhost:8080/h2-console/login.do.
+In the JDBC url use jdbc:h2:mem:testdb. Keep the password blank.Click on Connect.

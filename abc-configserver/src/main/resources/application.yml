@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations:
+          - classpath:/config/app-config
+          - classpath:/config/app-config/Dev
+          - classpath:/config/app-config/QA
+          - classpath:/config/app-config/UAT

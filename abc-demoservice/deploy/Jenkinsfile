@@ -37,7 +37,9 @@ pipeline {
             
             		sh "docker login -u mkhalid003 -p Welcome@99" 
                           
-                    sh "docker push mkhalid003/abc-demoservice"  
+                    sh "docker push mkhalid003/abc-demoservice" 
+                    
+                    sh "docker logout" 
                                             
             	}
         }

@@ -1,0 +1,13 @@
+https://dzone.com/articles/tracing-in-microservices-with-spring-cloud-sleuth
+
+
+The portion of the log statement that 
+Sleuth adds is [slueth-sample,44462edc42f2ae73,44462edc42f2ae73,false]. 
+
+What do all these values mean? The first part is the 
+application name (whatever you set spring.application.name to in bootstrap.yml). 
+The second value is the trace id. 
+The third value is the span id. 
+Finally the last value indicates 
+whether the span should be exported to Zipkin (more on Zipkin later).
+
